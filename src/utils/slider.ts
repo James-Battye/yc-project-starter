@@ -2,6 +2,8 @@
 // Watch this
 // If you're getting red lines under the next 2 lines, write this in your terminal 'sudo pnpm i' 
 // then write 'pnpm install swiper' in the terminal after that.
+// Copy this and paste it on a new ts file for each unique slider design on the site. 
+
 import { Swiper } from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import { getFirstWord } from 'src/utils/getClassName';
