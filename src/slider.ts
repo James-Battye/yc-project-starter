@@ -1,3 +1,7 @@
+// How to use: https://jamesbattye.notion.site/Slider-Swiper-68ab88ffc62f42c090957922f9bf8376?pvs=4
+// Watch this
+// If you're getting red lines under the next 2 lines, write this in your terminal 'sudo pnpm i' 
+// then write 'pnpm install swiper' in the terminal after that.
 import { Swiper } from 'swiper';
 import 'swiper/swiper-bundle.css';
 
@@ -25,15 +29,6 @@ sliders.forEach((e) => {
   const nav = e.querySelector<HTMLElement>("[element='navigation']");
   const nextArrow = nav!.querySelector<HTMLElement>("[element='next-arrow']");
   const prevArrow = nav!.querySelector<HTMLElement>("[element='prev-arrow']");
-
-  console.log({
-    wrapper: wrapper,
-    list: list,
-    item: item,
-    nav: nav,
-    nextArrow: nextArrow,
-    prevArrow: prevArrow,
-  });
 
   const listRaw = list!.className;
   const itemRaw = item!.className;
