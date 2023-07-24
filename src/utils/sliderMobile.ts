@@ -4,36 +4,35 @@
 // then write 'pnpm install swiper' in the terminal after that.
 // Copy this and paste it on a new ts file for each unique slider design on the site. 
 
-
 import { Swiper } from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import { getFirstWord } from 'src/utils/getClassName';
 
-
-const mobileSliders = document.querySelectorAll<HTMLElement>("[element='mobile-slider']");
+const identifier = ''
+const sliders = document.querySelectorAll<HTMLElement>(`[${identifier}-element='slider-component']`);
 
 if (window.innerWidth < 767) {
-    mobileSliders.forEach((e) => {
-        console.log(e)
-        const wrapper = e.querySelector<HTMLElement>("[element='wrapper']");
-        const list = e.querySelector<HTMLElement>("[element='list']");
-        const item = e.querySelector<HTMLElement>("[element='item']");
-        const nav = e.querySelector<HTMLElement>("[element='navigation']");
-        const nextArrow = nav!.querySelector<HTMLElement>("[element='next-arrow']");
-        const prevArrow = nav!.querySelector<HTMLElement>("[element='prev-arrow']");
 
-        const listRaw = list!.className;
-        const itemRaw = item!.className;
+    sliders.forEach((e) => {
+        const wrapper = e.querySelector<HTMLElement>(`[${identifier}-element='wrapper']`);
+        const list = e.querySelector<HTMLElement>(`[${identifier}-element='list']`);
+        const item = e.querySelector<HTMLElement>(`[${identifier}-element='item']`);
+        const nav = e.querySelector<HTMLElement>(`[${identifier}-element='navigation']`);
+        const paginationElement = e.querySelector<HTMLElement>(`[${identifier}-element='pagination']`)
+        const nextArrow = nav!.querySelector<HTMLElement>(`[${identifier}-element='next-arrow']`);
+        const prevArrow = nav!.querySelector<HTMLElement>(`[${identifier}-element='prev-arrow']`);
+        const paginationDot = paginationElement?.querySelector<HTMLElement>(`[${identifier}-element='pagination-dot']`)
+        const paginationActiveClass = 'is-active'
 
-        const listClass = getFirstWord(listRaw);
-        const itemClass = getFirstWord(itemRaw);
-        console.log(wrapper)
+        const listClass = getFirstWord(list!);
+        const itemClass = getFirstWord(item!);
+        const paginationDotClass = getFirstWord(paginationDot!)
 
         if (wrapper) {
             const swiper = new Swiper(wrapper, {
                 modules: [Navigation, Pagination],
                 speed: 400,
-                spaceBetween: 24,
+                spaceBetween: 0,
                 slidesPerView: 1,
                 loop: true,
                 direction: 'horizontal',
@@ -42,9 +41,15 @@ if (window.innerWidth < 767) {
                 navigation: {
                     nextEl: nextArrow,
                     prevEl: prevArrow,
+                },
+                pagination: {
+                    el: paginationElement,
+                    bulletActiveClass: paginationActiveClass,
+                    bulletClass: paginationDotClass,
+                    bulletElement: "button",
+                    clickable: true
                 }
             });
-            console.log(swiper)
         }
     });
 }

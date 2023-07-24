@@ -1,5 +1,4 @@
 export function accordianSetup() {
-
     const links = document.querySelectorAll<HTMLElement>('[faq-link]');
 
     links.forEach((e) => {

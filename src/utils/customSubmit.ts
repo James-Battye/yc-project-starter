@@ -7,7 +7,7 @@ export function customFormSubmit() {
 
         button?.addEventListener("click", function (event) {
             event.preventDefault();
-            if (form) form.submit();
+            if (form) form.requestSubmit();
         });
     });
 }
