@@ -7,7 +7,7 @@ const BUILD_DIRECTORY = 'dist';
 const PRODUCTION = process.env.NODE_ENV === 'production';
 
 // Config entrypoint files
-const ENTRY_POINTS = ['src/utils/markerLoad.ts'];
+const ENTRY_POINTS = ['src/test.ts', 'src/utils/slider.ts'];
 
 // Config dev serving
 const LIVE_RELOAD = !PRODUCTION;

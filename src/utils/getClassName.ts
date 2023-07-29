@@ -1,5 +1,5 @@
 export function getFirstWord(element: HTMLElement): string {
-    let str = element!.className;
+    let str = element.className;
     // Trim any leading or trailing spaces from the string
     str = str.trim();
     // Find the first space in the string
