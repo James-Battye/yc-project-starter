@@ -1,5 +1,5 @@
 // Retrieve a specific element from another page and append it to the current page
-async function fetchAndAppendElement(): Promise<void> {
+async function fetchAndAppendElement(): {
     try {
         // Fetch the other page's HTML
         const response = await fetch('/');

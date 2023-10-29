@@ -7,8 +7,7 @@ export function getFirstWord(element: HTMLElement): string {
     if (spaceIndex === -1) {
         // If there are no spaces in the string, return the whole string
         return str;
-    } else {
-        // If there is a space in the string, return the substring before the space
-        return str.substring(0, spaceIndex);
     }
+    // If there is a space in the string, return the substring before the space
+    return str.substring(0, spaceIndex);
 }
