@@ -1,20 +1,8 @@
-import { SwiperOptions } from 'node_modules/swiper/types/swiper-options';
+import type { SwiperOptions } from 'node_modules/swiper/types/swiper-options';
 import { getFirstWord } from 'src/helpers/getClassName';
 import { Swiper } from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
-/**
- * Attribute Name: BLANK-element
- *
- * Required Attributes:
- * - [BLANK-element='wrapper']
- * - [BLANK-element='list']
- * - [BLANK-element='item']
- * - [BLANK-element='pagination']
- * - [BLANK-element='navigation']
- * - [BLANK-element='next-arrow']
- * - [BLANK-element='prev-arrow']
- */
 const identifier = '';
 const sliders = document.querySelectorAll<HTMLElement>(
   `[${identifier}-element='slider-component']`
