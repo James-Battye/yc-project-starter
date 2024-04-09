@@ -1,20 +1,20 @@
 {
-  "name": "@finsweet/developer-starter",
+  "name": "@yes-chef/your-project",
   "version": "0.0.0",
-  "description": "Developer starter template for Finsweet projects.",
-  "homepage": "https://github.com/finsweet/developer-starter#readme",
+  "description": "Project description.",
+  "homepage": "https://github.com/james-battye/your-project#readme",
   "license": "ISC",
   "keywords": [],
   "author": {
-    "name": "Finsweet",
-    "url": "https://finsweet.com/"
+    "name": "Yes Chef Studio",
+    "url": "https://yeschef.studio/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/finsweet/developer-starter.git"
+    "url": "git+https://github.com/james-battye/your-project.git"
   },
   "bugs": {
-    "url": "https://github.com/finsweet/developer-starter/issues"
+    "url": "https://github.com/james-battye/your-project/issues"
   },
   "type": "module",
   "main": "src/index.ts",
